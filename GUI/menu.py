@@ -11,10 +11,11 @@ def main_menu():
         def print_rectangle_menu():
             print(star,Fore.LIGHTBLUE_EX, "RECTANGLE MENU",Fore.RESET, star)
             print("\t1. Show Rectangle")
-            print("\t2. Perimeter")
-            print("\t3. Area")
-            print("\t4. Back to MAIN MENU")
-            print("\t5. Exit")
+            print("\t2. Get Dimensions")
+            print("\t3. Perimeter")
+            print("\t4. Area")
+            print("\t5. Back to MAIN MENU")
+            print("\t6. Exit")
 
         while True:
             print_rectangle_menu()
@@ -27,8 +28,10 @@ def main_menu():
             elif choice == '3':
                 pass
             elif choice == '4':
-                return
+                pass
             elif choice == '5':
+                return
+            elif choice == '6':
                 exit(14)
             else:
                 print(Fore.RED, "Wrong menu selection! Enter any key to try again ...", Fore.RESET)
