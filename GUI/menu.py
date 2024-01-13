@@ -1,10 +1,12 @@
 from colorama import Fore
+from S10Exr.rectangle import get_rec
 
 print()
 
 
 def main_menu():
     star = '*' * 15
+    press_continue="Press any key to continue..."
 
     # ------- 1. RECTANGLE MENU -------
     def rectangle_menu():
@@ -21,14 +23,22 @@ def main_menu():
             print_rectangle_menu()
             choice = input("Enter your choice [1-4]: ")
 
+            rec = get_rec()
             if choice == '1':
-                pass
+                rec.show_rectangle()
+                input(press_continue)
             elif choice == '2':
-                pass
+                rec.get_dimensions()
+                rec.show_rectangle()
+                input(press_continue)
             elif choice == '3':
-                pass
+                rec.show_rectangle()
+                print(f"Perimeter of the rectangle ((w+l)*2): {rec.perimeter()}")
+                input(press_continue)
             elif choice == '4':
-                pass
+                rec.show_rectangle()
+                print(f"Area of the rectangle (w*l): {rec.area()}")
+                input(press_continue)
             elif choice == '5':
                 return
             elif choice == '6':
