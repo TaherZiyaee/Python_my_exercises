@@ -21,9 +21,10 @@ def main_menu():
 
         while True:
             print_rectangle_menu()
-            choice = input("Enter your choice [1-4]: ")
+            choice = input("Enter your choice [1-6]: ")
 
             rec = get_rec()
+
             if choice == '1':
                 rec.show_rectangle()
                 input(press_continue)
@@ -51,7 +52,17 @@ def main_menu():
     # ------- 2. CAR MENU -------
     def car_menu():
         def print_car_menu():
-            pass
+            print(star, Fore.LIGHTBLUE_EX, "CAR MENU", Fore.RESET, star)
+            print("\t1. Show Car Specs")
+            print("\t2. Get Car Specs")
+            print("\t3. Back to MAIN MENU")
+            print("\t4. Exit")
+
+        while True:
+            print_car_menu()
+            choice = input("Enter your choice [1-4]: ")
+
+            car
 
     # ------- 3. STUDENT MENU -------
     def student_menu():
