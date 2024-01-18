@@ -1,5 +1,6 @@
 from colorama import Fore
 from S10Exr.rectangle import get_rec
+from S10Exr.car import get_car
 
 print()
 
@@ -7,6 +8,7 @@ print()
 def main_menu():
     star = '*' * 15
     press_continue="Press any key to continue..."
+    warning_msg=Fore.RED, "Wrong menu selection! Enter any key to try again ...", Fore.RESET
 
     # ------- 1. RECTANGLE MENU -------
     def rectangle_menu():
@@ -45,7 +47,7 @@ def main_menu():
             elif choice == '6':
                 exit(14)
             else:
-                print(Fore.RED, "Wrong menu selection! Enter any key to try again ...", Fore.RESET)
+                warning_msg
 
             print()
 
@@ -62,7 +64,21 @@ def main_menu():
             print_car_menu()
             choice = input("Enter your choice [1-4]: ")
 
-            car
+            car = get_car()
+
+            if choice=='1':
+                car.show_car()
+                input(press_continue)
+            elif choice=='2':
+                car.get_car_specs()
+                car.show_car()
+                input(press_continue)
+            elif choice=='3':
+                return
+            elif choice==4:
+                exit(15)
+            else:
+                warning_msg
 
     # ------- 3. STUDENT MENU -------
     def student_menu():
@@ -84,13 +100,13 @@ def main_menu():
         if choice == '1':
             rectangle_menu()
         elif choice == '2':
-            pass
+            car_menu()
         elif choice == '3':
             pass
         elif choice == '4':
             exit(13)
         else:
-            print(Fore.RED, "Wrong menu selection! Enter any key to try again ...", Fore.RESET)
+            warning_msg
 
         print()
 
