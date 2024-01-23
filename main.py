@@ -13,9 +13,14 @@ from itertools import count
 #
 # print(getattr(print_name,"gender"))
 
-def fib(x):
-    if x==0 or x==1:
-        return 1
-    return fib(x-1)+fib(x-2)
+# def fib(x):
+#     if x==0 or x==1:
+#         return 1
+#     return fib(x-1)+fib(x-2)
+#
+# print(fib(5))
 
-print(fib(5))
+b = "Baby"
+
+print(b.lower())
+print(b)

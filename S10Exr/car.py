@@ -24,7 +24,7 @@ def get_car():
     return car
 
 
-def main():
+def main()->None:
     car = get_car()
     car.get_car_specs()
     car.show_car()
