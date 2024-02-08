@@ -7,13 +7,13 @@ print()
 
 def main_menu():
     star = '*' * 15
-    press_continue="Press any key to continue..."
-    warning_msg=Fore.RED, "Wrong menu selection! Enter any key to try again ...", Fore.RESET
+    press_continue = "Press any key to continue..."
+    warning_msg = Fore.RED, "Wrong menu selection! Enter any key to try again ...", Fore.RESET
 
     # ------- 1. RECTANGLE MENU -------
     def rectangle_menu():
         def print_rectangle_menu():
-            print(star,Fore.LIGHTBLUE_EX, "RECTANGLE MENU",Fore.RESET, star)
+            print(star, Fore.LIGHTBLUE_EX, "RECTANGLE MENU", Fore.RESET, star)
             print("\t1. Show Rectangle")
             print("\t2. Get Dimensions")
             print("\t3. Perimeter")
@@ -66,16 +66,16 @@ def main_menu():
 
             car = get_car()
 
-            if choice=='1':
+            if choice == '1':
                 car.show_car()
                 input(press_continue)
-            elif choice=='2':
+            elif choice == '2':
                 car.get_car_specs()
                 car.show_car()
                 input(press_continue)
-            elif choice=='3':
+            elif choice == '3':
                 return
-            elif choice==4:
+            elif choice == 4:
                 exit(15)
             else:
                 warning_msg
@@ -87,7 +87,7 @@ def main_menu():
 
     # ------- MAIN MENU -------
     def print_main_menu():
-        print(star, Fore.LIGHTBLUE_EX,"MAIN MENU",Fore.RESET, star)
+        print(star, Fore.LIGHTBLUE_EX, "MAIN MENU", Fore.RESET, star)
         print("\t1. Rectangle")
         print("\t2. Car")
         print("\t3. Student")
