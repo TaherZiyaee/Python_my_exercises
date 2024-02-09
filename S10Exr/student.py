@@ -11,8 +11,7 @@ class Student:
         self.score = input("Score: ")
 
     def show_student(self):
-
-
+        print(f"Name: {self.name}\nAge: {self.age}\nScore: {self.score}")
 
 student=None
 
