@@ -1,5 +1,5 @@
 class Car:
-    def __init__(self, brand: str="", model: str="") -> None:
+    def __init__(self, brand: str = "", model: str = "") -> None:
         self.brand = brand
         self.model = model
         self.year = ""
@@ -10,7 +10,7 @@ class Car:
         self.model = input("Model: ")
         self.year = input("Year: ")
 
-    def show_car(self)->None:
+    def show_car(self) -> None:
         print(f"{self.brand} {self.model} - {self.year}")
 
 
@@ -24,7 +24,7 @@ def get_car():
     return car
 
 
-def main()->None:
+def main() -> None:
     car = get_car()
     car.get_car_specs()
     car.show_car()
