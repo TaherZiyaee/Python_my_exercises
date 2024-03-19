@@ -1,18 +1,19 @@
 from pprint import pprint
 
 
-class UserList(list):
-    pass
+class UserList(list["User"]):
+    def search(self, user_name: str) -> list["User"]:
+        matching_users: list["User"] = []
+        for user in self:
+            if user_name in user.username:
+                matching_users.append(user)
+        return matching_users
 
-
-li = UserList()
-li.append(3)
-li.append("Taher")
-print(li)
 
 
 class User:
-    all_users = []
+    # all_users = []
+    all_users = UserList()
 
     def __init__(self, username: str, password: str, email: str) -> None:
         self.username = username
@@ -35,7 +36,10 @@ class Seller(User):
 def main():
     # print(User.__base__)
     user1 = User("Taher", "123456", "Tahez@gmail.com")
-    # user2 = User("Saeid", "111111", "SaeidR@gmail.com")
+    user2 = User("Saeid", "111111", "SaeidR@gmail.com")
+    user3 = User("reza", "8710301", "reza@gmail.com")
+    user4 = User("ali", "809123", "aliM@gmail.com")
+    user5 = User("alireza", "25435", "alirezaS@gmail.com")
     # pprint(User.all_users)
     # print(User.all_users)
 
@@ -46,6 +50,8 @@ def main():
     # print(repr(s1))
     # s1.order("book")
     # print(s1.all_users)
+
+    pprint(User.all_users.search("reza"))
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
-x=17.76325687236
-y=4
+x = 17.76325687236
+y = 4
 
 # print("pow is",pow(x,y))
 # print("divmod is",divmod(x,y))
@@ -10,10 +10,21 @@ y=4
 # for method in dir(dict):
 #     print(method)
 
-sentence="Hello Baby CommOn\nwHats youR nAMe?"
+# sentence="Hello Baby CommOn\nwHats youR nAMe?"
 # print(sentence.casefold())
 # print(sentence.title())
-print(sentence.partition("CommOn"))
+# print(sentence.partition("CommOn"))
 
-name="Taher"
-print(name.center(len(name)+2," ").center(len(name)+10,"-"))
+# name="Taher"
+# print(name.center(len(name)+2," ").center(len(name)+10,"-"))
+
+# lst = [
+#     ["a", "dsffsdfs", "sdf"],
+#     ["dsfsd", "df", "jhsgdfjhgsd"]
+# ]
+#
+# for name in lst:
+#     print("{: >20}{: >20}".format(*name))
+
+
+print("%*s\t\t%i" % (15,"Ali",17))
