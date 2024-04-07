@@ -10,7 +10,6 @@ class UserList(list["User"]):
         return matching_users
 
 
-
 class User:
     # all_users = []
     all_users = UserList()
@@ -21,16 +20,26 @@ class User:
         self.password = password
         User.all_users.append(self)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.username}"
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{self.__class__.__name__}({self.username!r},{self.password!r},{self.email!r})"
 
 
 class Seller(User):
     def order(self, order: "Order") -> None:
         print(f"{self.username}, From your products {order!r} was sold!")
+
+
+class Buyer(User):
+    def __init__(self, username: str, email: str, password: str, phone: str):
+        super().__init__(username, email, password)
+        self.phone = phone
+
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}({self.username!r},{self.password!r},{self.email!r}," \
+               f"{self.phone})"
 
 
 def main():
@@ -51,7 +60,13 @@ def main():
     # s1.order("book")
     # print(s1.all_users)
 
-    pprint(User.all_users.search("reza"))
+    # pprint(User.all_users.search("reza"))
+
+    buyer_account = Buyer("reza","reza34@yahoo.com","2143","0939")
+    # print(buyer_account.phone)
+    # pprint(buyer_account.all_users)
+
+    print(isinstance(buyer_account,User))
 
 
 if __name__ == "__main__":
